@@ -10,10 +10,10 @@ const displayAllTools = (aiTools) => {
 
   aiTools.forEach((aiTool) => {
     const aiToolsDiv = document.createElement("div");
-    aiToolsDiv.classList = `card w-96 bg-base-100 shadow-xl`;
+    aiToolsDiv.classList = `card  bg-base-100 shadow-xl`;
     aiToolsDiv.innerHTML = `
     <figure class="px-10 pt-10">
-    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+    <img src="${aiTool.image}" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">Shoes!</h2>
@@ -27,3 +27,9 @@ const displayAllTools = (aiTools) => {
   });
 };
 loadAllTools();
+
+// search functionality added
+const handleSearch = () => {
+  const inputFieldText = document.getElementById("searchField");
+  const searchText = inputFieldText.value;
+};

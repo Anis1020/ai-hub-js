@@ -13,11 +13,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1 class="text-center">All AI Tools here</h1>
+    </header>
     <main>
+      <!-- search functionality -->
+      <div id="searchAiTolls" class="text-center">
+        <input
+          type="text"
+          placeholder="Type here"
+          id="searchField"
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button onclick="handleSearch()" class="btn btn-accent">Accent</button>
+      </div>
       <!-- all ai loaded here -->
       <section>
-        <div id="aiToolsContainer"></div>
+        <div id="aiToolsContainer" class="grid grid-cols-4 gap-4"></div>
       </section>
     </main>
     <script src="aiHub.js"></script>
